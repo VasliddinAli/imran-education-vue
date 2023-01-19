@@ -72,6 +72,11 @@ export default {
           direction: this.direction,
           telegram: this.telegram,
         });
+        this.name = null,
+        this.teacherImg = null,
+        this.phone = 998,
+        this.direction = null,
+        this.telegram = 'https://t.me/'
         if (result.status == 201) {
           console.log("Teacher success added!");
           this.loadData();
