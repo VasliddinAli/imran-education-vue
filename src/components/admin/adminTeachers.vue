@@ -62,7 +62,8 @@ export default {
       reader.readAsDataURL(files[0])
       reader.onload = () => (this.teacherImg = reader.result)
     },
-    async addTeacher() {
+    async addTeacher(e) {
+    e.preventDefault();
       if(this.name && this.teacherImg && this.phone && this.direction && this.telegram){
         let result = await axios.post("https://imran-db.up.railway.app/teachers", {
           name: this.name,
